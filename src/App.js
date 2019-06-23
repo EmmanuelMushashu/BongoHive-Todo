@@ -93,7 +93,7 @@ showEditedItemform = (key) => {
       const items = [...this.state.items, newItem]
       this.setState({
         items: items,
-        currentItem: { text: '', key: '', show: false},
+        currentItem: { text: '', key: ''},
       })
       data = JSON.stringify(this.state.item)
     }

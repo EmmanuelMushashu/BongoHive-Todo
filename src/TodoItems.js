@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-class TodoItems extends React.Component {
+class TodoItems extends Component {
 
     constructor() {
       super()
@@ -25,13 +25,13 @@ class TodoItems extends React.Component {
         
          {  !item.show && 
          <div className="item-container">
-            <span className="control-containers checkbox-padding">
+            
                 <input className="status-checkbox" type="checkbox" name="status" value="" checked={item.completed} onChange={() => this.props.changeStatus(item.key)}></input>
-            </span>
+          
             <span className={`item-text ${txtClass}`} onClick={() => this.props.showEditItemForm(item.key)}>{item.text}</span>
-            <span className="control-containers">
+            
             <button className="delete-button" onClick={() => this.props.deleteItem(item.key)}>Delete</button>
-            </span>
+            
           
           </div>
          }
